@@ -2,47 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarwan Singh "Sunny" Dhillon</title>
   <style>
+    /* Global reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #2c3e50;
-      margin: 40px auto;
-      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
       line-height: 1.6;
     }
-    h1, h2 { color: #34495e; }
-    nav {
-      margin-bottom: 30px;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #2980b9;
-      font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-    .section {
-      margin-top: 40px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #7f8c8d;
+
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 30px 20px;
       text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0f172a;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f1f5f9;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fff;
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    a.resume-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.resume-link:hover {
+      background: #1e40af;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f5f9;
+      color: #475569;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
-  <h1>Sarwan Singh "Sunny" Dhillon</h1>
-  <p><b>UIN:</b> [Insert Your UIN Here]</p>
-  <p>Psychology graduate passionate about data analytics, mental health research, and applying data-driven insights to improve lives.</p>
+  <header>
+    <h1>Sarwan Singh "Sunny" Dhillon</h1>
+    <p>Psychology graduate passionate about data analytics, mental health research, and applying data-driven insights to improve lives.</p>
+  </header>
 
   <nav>
     <a href="#about">About</a>
@@ -51,35 +117,36 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <div id="about" class="section">
-    <h2>About Me</h2>
-    <p>I recently graduated with a B.S. in Psychology from Virginia Commonwealth University. My academic and professional journey includes clinical work, research assistance, and data analysis experience. I’m committed to bridging psychology and data science to create meaningful impact.</p>
-  </div>
+  <div class="container">
+    <div id="about" class="card">
+      <h2>About Me</h2>
+      <p>I recently graduated with a B.S. in Psychology from Virginia Commonwealth University. My academic and professional journey includes clinical work, research assistance, and data analysis experience. I’m committed to bridging psychology and data science to create meaningful impact.</p>
+    </div>
 
-  <div id="projects" class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><b>Sleep Study Data Analysis</b> – Helped organize and analyze participant data for research on sleep health.</li>
-      <li><b>Clinical Assessment Support</b> – Assisted psychologists in scoring and interpreting patient assessments.</li>
-      <li><b>Dispatch & Bookkeeping System</b> – Managed operations and data tracking for a logistics company.</li>
-    </ul>
-  </div>
+    <div id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><b>Sleep Study Data Analysis</b> – Helped organize and analyze participant data for research on sleep health.</li>
+        <li><b>Clinical Assessment Support</b> – Assisted psychologists in scoring and interpreting patient assessments.</li>
+        <li><b>Dispatch & Bookkeeping System</b> – Managed operations and data tracking for a logistics company.</li>
+      </ul>
+    </div>
 
-  <div id="resume" class="section">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" target="_blank">📄 View My Resume (PDF)</a></p>
-  </div>
+    <div id="resume" class="card">
+      <h2>Resume</h2>
+      <a href="resume.pdf" target="_blank" class="resume-link">📄 View My Resume</a>
+    </div>
 
-  <div id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sunnyd1603@gmail.com">sunnyd1603@gmail.com</a></p>
-    <p>Phone: (804)-245-4778</p>
-    <p>Location: Midlothian, VA</p>
+    <div id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sunnyd1603@gmail.com">sunnyd1603@gmail.com</a></p>
+      <p>Phone: (804)-245-4778</p>
+      <p>Location: Midlothian, VA</p>
+    </div>
   </div>
 
   <footer>
     <p>© 2025 Sarwan Dhillon — All rights reserved.</p>
   </footer>
-
 </body>
 </html>
